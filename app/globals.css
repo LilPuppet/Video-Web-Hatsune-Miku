@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0; 
+  --background-start-rgb: 0, 51, 51; 
+  --background-end-rgb: 0, 51, 51; 
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255; 
+    --background-start-rgb: 0, 0, 0; 
+    --background-end-rgb: 0, 0, 0; 
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: 'Poppins', sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .container-custom {
+    @apply flex h-screen font-sans bg-[#003333] text-[#E0FFFF]; 
+  }
+
+  .sidebar-custom {
+    @apply w-[350px] h-full bg-[#008B8B] shadow-md p-5 overflow-y-auto fixed top-0 left-0 z-10; 
+  }
+
+  .playlist-title {
+    @apply text-sm font-bold mb-5 text-[#00CED1] text-center; 
+  }
+
+  .list-item-custom {
+    @apply cursor-pointer p-2 mb-2 bg-[#20B2AA] rounded text-sm text-[#E0FFFF]; 
+  }
+
+  .content-custom {
+    @apply flex flex-col items-center justify-center flex-1 p-5 ml-[250px];
+  }
+
+  .frame-text {
+    @apply text-sm text-[#E0FFFF] mb-24;
+  }
+
+  .album-cover {
+    @apply w-[300px] h-[300px] rounded-lg shadow-lg mb-12;
+  }
+
+  .track-title {
+    @apply text-lg font-bold mb-2 text-[#00CED1]; 
+  }
+
+  .track-artist {
+    @apply text-sm text-[#E0FFFF] mb-4;
+  }
+
+  .track-duration {
+    @apply text-sm text-[#E0FFFF] border-t border-[#E0FFFF] w-[200px] mx-auto pt-1 mb-4;
+  }
+
+  .controls-container {
+    @apply flex flex-row items-center;
+  }
+
+  .play-button {
+    @apply w-[60px] h-[60px] rounded-full bg-[#FF69B4] flex items-center justify-center cursor-pointer mx-4; 
+  }
+
+  .progress-container {
+    @apply flex flex-col items-center mt-4;
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .progress-bar {
+    @apply w-full h-2 bg-[#20B2AA] rounded-lg cursor-pointer appearance-none;
+    position: relative;
+  }
+  
+  .progress-bar::-webkit-slider-thumb {
+    @apply w-4 h-4 bg-[#FF69B4] rounded-full;
+    appearance: none;
+  }
+  
+  .progress-bar::-moz-range-thumb {
+    @apply w-4 h-4 bg-[#FF69B4] rounded-full;
+  }
+  
+  .progress-time {
+    @apply text-sm text-[#E0FFFF] mt-2;
+  }
+
+  /* Barra de Volume */
+  .volume-bar-container {
+    position: relative;
+    width: 150px;
+    height: 2px;
+  }
+
+  .volume-bar {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 2px;
+    background: #FF69B4; /* Rosa */
+    cursor: pointer;
+    position: relative;
+  }
+
+  .volume-bar::-webkit-slider-runnable-track {
+    height: 2px;
+    background: #FF69B4; /* Rosa */
+  }
+
+  .volume-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #FFFFFF; 
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    margin-top: -7px;
+  }
+
+  .volume-bar::-moz-range-track {
+    height: 2px;
+    background: #FF69B4; /* Rosa */
+  }
+
+  .volume-bar::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #FFFFFF; 
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .volume-bar::-ms-track {
+    height: 2px;
+    background: #FF69B4; /* Rosa */
+    border-color: transparent;
+    color: transparent;
+  }
+
+  .volume-bar::-ms-thumb {
+    width: 16px;
+    height: 16px;
+    background: #FFFFFF; 
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+}
