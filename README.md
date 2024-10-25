@@ -1,6 +1,6 @@
 ﻿# Tarefa2-RadioWebAzul
 ## AVISO
-Por favor, deixe o volume do seu dispositivo em 30%, a idéia do projeto é reproduzir uma música.
+Por favor, deixe o volume do seu dispositivo em 30%, a idéia do projeto é reproduzir uma vídeo, e pode está alto demais.
 
 ## Começando
 Esse é um projeto [Next.js](https://nextjs.org/) usando o bootstrap [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
